@@ -1,0 +1,9 @@
+project.description="Adding properties project"
+println "Description of project is : ${description}"
+
+ext {
+    dev="Prashanth"
+}
+ext.environment="Dev"
+println "My name is ${dev}"
+println "${environment} is being used."

@@ -1,0 +1,16 @@
+project.description="Sample description for display properties"
+
+defaultTasks 'displayProperties'
+task displayProperties {
+    ext {
+        sample = "Sample"
+    }
+    doFirst {
+        println "Hello, how are you?"
+        println "Sample task property ${sample}"
+        println "Project description : ${project.description}"
+    }
+    doLast {
+        println "After executing everything"
+    }
+}
