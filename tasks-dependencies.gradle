@@ -1,0 +1,19 @@
+task clean {
+    doLast {
+        println "Cleaning target folder"
+    }
+}
+
+task compile {
+    doLast {
+        println "Compiling code"
+    }
+}
+compile.dependsOn clean
+
+task("package", dependsOn:compile) {
+    doLast {
+        println "Packaging code"
+    }
+}
+

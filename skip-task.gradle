@@ -1,0 +1,13 @@
+ext {
+    env = "Prod"
+}
+
+task dontRunInProd {
+    onlyIf {
+        !project.hasProperty('env') || project.env != "Prod"
+    }
+
+    doLast {
+        println 'Task execution completed'
+    }
+}

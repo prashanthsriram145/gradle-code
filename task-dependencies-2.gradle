@@ -1,0 +1,24 @@
+task A {
+    doLast {
+        println "A"
+    }
+}
+
+task B {
+    doLast {
+        println "B"
+    }
+}
+
+task C {
+    doLast {
+        println "C"
+    }
+}
+
+//A.dependsOn C
+//B.dependsOn C
+
+A.dependsOn B
+A.dependsOn C
+B.mustRunAfter C
