@@ -3,9 +3,10 @@ ext {
 }
 
 task dontRunInProd {
-    onlyIf {
-        !project.hasProperty('env') || project.env != "Prod"
-    }
+//    onlyIf {
+//        !project.hasProperty('env') || project.env != "Prod"
+//    }
+    enabled = !project.hasProperty('env') || project.env != "Prod"
 
     doLast {
         println 'Task execution completed'
